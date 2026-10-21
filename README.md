@@ -33,8 +33,8 @@ As propostas foram feitas para revisão e não para estar online tal como estão
 
 - Retire `<meta name="robots" content="noindex, nofollow">` de cada página. Enquanto esta linha estiver lá, o Google não indexa o site.
 - Retire `<script src="../assets/options.js" defer></script>` das páginas `b/`, `c/` e `d/`. É o seletor flutuante "Proposta de Tiago Guardão · em revisão".
-- Escolha a proposta que vai ficar e substitua a página de escolha (`index.html`) por ela.
-- Confirme os textos. Partem do que é público sobre a Cardante, e o que ainda falta confirmar está entre parênteses retos, como o horário na proposta B.
+- Escolha a proposta que vai ficar. Não copie o `index.html` dela para a raiz do site, porque os estilos, scripts e imagens de cada proposta são carregados a partir da sua própria pasta. Mantenha a pasta e faça a raiz redirecionar para ela, no alojamento ou com `<meta http-equiv="refresh" content="0; url=d/">` no `index.html` da raiz (com a letra da proposta escolhida).
+- Confirme todos os textos, porque partem do que é público sobre a Cardante. A proposta B tem dois pontos marcados entre parênteses retos: o horário e a disponibilidade de drenagem linfática.
 
 ## Imagens e 3D
 
