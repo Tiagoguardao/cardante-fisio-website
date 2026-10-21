@@ -1,0 +1,24 @@
+Copyright (c) 2026 Tiago Guardão. Todos os direitos reservados.
+
+A Cardante – Fisioterapia e Bem-Estar (Arcozelo, Vila Nova de Gaia) pode
+usar, copiar, modificar e publicar o código e os ficheiros deste
+repositório para o seu próprio website, diretamente ou através de quem
+contratar para esse fim, incluindo a partir de um fork deste repositório.
+
+Qualquer outra utilização, cópia, modificação ou distribuição precisa de
+autorização prévia, por escrito, de Tiago Guardão.
+
+O nome, o logótipo e o símbolo da Cardante (assets/cardante-logo.svg,
+assets/cardante-mark.svg e as versões derivadas b/mark.svg e
+c/mark-line.svg) pertencem à
+Cardante – Fisioterapia e Bem-Estar e não são licenciados por este
+documento.
+
+Os componentes de terceiros mantêm as suas próprias licenças:
+- as fontes em b/fonts/, sob a SIL Open Font License (ver os ficheiros
+  *-OFL.txt ao lado de cada fonte);
+- three.js (licença MIT) e as Google Fonts, carregados a partir dos
+  respetivos serviços e não incluídos neste repositório.
+
+O código e os ficheiros são fornecidos "tal como estão", sem garantias de
+qualquer tipo.

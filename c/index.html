@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f3eee5">
+  <meta name="description" content="Cardante – Fisioterapia e Bem-Estar, com Sofia Cardante, fisioterapeuta em Arcozelo, Vila Nova de Gaia. Pavimento pélvico, reabilitação oncológica e Reeducação Postural Global.">
+  <title>Mãos e folhas · Cardante – Fisioterapia e Bem-Estar, Arcozelo</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23f3eee5'/%3E%3Cpath d='M8 24C9 14 16 8 25 7c-1 9-7 16-17 17Z' fill='%236f9cb1' stroke='%232c6878' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M9 23 22 10' stroke='%232c6878' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preload" href="./hero.glb" as="fetch" type="model/gltf-binary" crossorigin>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+  <canvas class="scene" id="scene" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="topo">
+    <a class="brand" href="#inicio" aria-label="Cardante – Fisioterapia e Bem-Estar, voltar ao início">
+      <img class="brand-mark" src="../assets/cardante-mark.svg" width="40" height="39" alt="">
+      <span class="brand-type">Cardante<small>Fisioterapia e Bem-Estar</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#sofia">A Sofia</a>
+      <a href="#areas">Áreas de cuidado</a>
+      <a href="#metodo">Como trabalha</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="header-call" href="tel:+351914378487"><span class="header-call-label">Marcar</span> <span class="header-call-num">914 378 487</span></a>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- I. Hero -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Fisioterapia e Bem-Estar · Arcozelo, Vila Nova de Gaia</p>
+        <h1 id="hero-title" class="display">Recuperar o corpo,<br><em>cuidar da pessoa.</em></h1>
+        <p class="lead">Fisioterapia com Sofia Cardante, no seu gabinete em Arcozelo. Um trabalho de mãos, de escuta e de método, dedicado sobretudo ao pavimento pélvico, à reabilitação oncológica e à Reeducação Postural Global.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="tel:+351914378487">Marcar por telefone <span aria-hidden="true">·</span> 914 378 487</a>
+          <a class="btn btn-line" href="#sofia">Conhecer a Sofia</a>
+        </div>
+        <p class="hero-meta">Sofia Cardante, fisioterapeuta · Cédula profissional n.º 7568 · Ordem dos Fisioterapeutas</p>
+      </div>
+      <figure class="hero-figure">
+        <div class="hands-slot" id="slot-hero">
+          <img class="hands-poster" src="./hands-poster.webp" width="1100" height="1100" alt="Escultura de duas mãos em porcelana branca, em concha, a segurar um ramo de folhas em azul-esverdeado.">
+        </div>
+        <figcaption><span class="fig-n">Fig. 1</span> Mãos e folhas. A fisioterapia como cuidado manual.</figcaption>
+      </figure>
+      <a class="scroll-cue" href="#manifesto"><span class="scroll-line" aria-hidden="true"></span>Continuar</a>
+    </section>
+
+    <!-- II. Manifesto -->
+    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
+      <div class="hands-slot hands-slot--travel" id="slot-manifesto" aria-hidden="true"></div>
+      <div class="manifesto-copy">
+        <p class="eyebrow" id="manifesto-title"><span class="num">I</span> Manifesto</p>
+        <p class="manifesto-big" data-reveal>A fisioterapia é um trabalho de mãos. Mas o que se cuida é a pessoa inteira: <em>o corpo e a mente não se separam.</em></p>
+        <div class="manifesto-cols" data-reveal>
+          <p>Cada acompanhamento começa por escutar. Perceber a história, o ritmo e os objetivos de quem chega, antes de qualquer técnica.</p>
+          <p>A fisioterapia não promete curas. Faz parte de uma equipa que ajuda a devolver funcionalidade, autoestima e qualidade de vida. E é na prevenção que estão os maiores ganhos.</p>
+        </div>
+        <blockquote class="quote" data-reveal>
+          <p><span class="quote-lead">A missão do fisioterapeuta, nas palavras da Sofia:</span> «restituição do bem-estar e da qualidade de vida da pessoa».</p>
+          <footer>Sofia Cardante, em entrevista ao <cite><a href="https://www.noticiasaominuto.com/lifestyle/1076948/dia-mundial-da-fisioterapia-a-profissao-que-recupera-o-corpo-e-a-mente" target="_blank" rel="noopener">Notícias ao Minuto</a></cite>, 2018</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- III. Sobre a Sofia -->
+    <section class="about" id="sofia" aria-labelledby="sofia-title">
+      <div class="about-head">
+        <p class="eyebrow"><span class="num">II</span> Sobre a Sofia</p>
+        <h2 id="sofia-title" class="display-2" data-reveal>Sofia <em>Cardante</em></h2>
+        <div class="credential" data-reveal>
+          <p class="credential-label">Cédula profissional</p>
+          <p class="credential-num">n.º 7568</p>
+          <p class="credential-org">Ordem dos Fisioterapeutas · inscrição ativa</p>
+          <a class="text-link" href="https://ordemdosfisioterapeutas.pt/pt/encontre-um-fisioterapeuta/" target="_blank" rel="noopener">Consultar o registo público <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="about-body">
+        <p class="about-lead" data-reveal>Fisioterapeuta e rosto da Cardante – Fisioterapia e Bem-Estar, em Arcozelo, Vila Nova de Gaia.</p>
+        <p data-reveal>Licenciada em Fisioterapia pelo Instituto Piaget, com formação inicial em Neurofisiologia, foi fisioterapeuta no Hospital Lusíadas Porto até 2022, ano em que abriu o seu gabinete. Dedica-se sobretudo à fisioterapia do pavimento pélvico, à reabilitação oncológica e à Reeducação Postural Global, e continua a aprofundar a área dermatofuncional <span class="tbc">mestrado em curso · a confirmar</span>.</p>
+        <p data-reveal>Acredita que a fisioterapia devolve funcionalidade, autoestima e qualidade de vida, e que é na prevenção que estão os maiores ganhos. Diz que foi a profissão que a escolheu: veio do desporto e começou como auxiliar de fisioterapia, quase por acaso.</p>
+
+        <h3 class="path-title" data-reveal>Percurso</h3>
+        <ol class="path" data-reveal>
+          <li><span class="path-when">Início</span><span class="path-what">Curso de auxiliar de fisioterapia e trabalho como assistente numa clínica em Vila Nova de Gaia.</span></li>
+          <li><span class="path-when">Neurofisiologia</span><span class="path-what">Formação em Neurofisiologia (CESPU – ESSVA) e trabalho como técnica no Hospital Lusíadas.</span></li>
+          <li><span class="path-when">Fisioterapia</span><span class="path-what">Licenciatura em Fisioterapia, Instituto Piaget, Vila Nova de Gaia, feita enquanto trabalhava.</span></li>
+          <li><span class="path-when">2018 – 2022</span><span class="path-what">Fisioterapeuta no Hospital Lusíadas Porto.</span></li>
+          <li><span class="path-when">2021</span><span class="path-what">Oradora no webinar <i>Fisioterapia em Oncologia – Retração mamária pós radioterapia</i>, Lusíadas Knowledge Center.</span></li>
+          <li><span class="path-when">2022</span><span class="path-what">Abre o seu gabinete em Vila Nova de Gaia: hoje, a Cardante – Fisioterapia e Bem-Estar, em Arcozelo.</span></li>
+          <li><span class="path-when">Sempre a aprender</span><span class="path-what">Curso de Oncologia e Estilo de Vida (European School of Lifestyle Oncology, 100 h) e formação em oncologia da mama. Mestrado em Fisioterapia Dermatofuncional, ESS do Politécnico do Porto <span class="tbc">a confirmar</span>.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- IV. Áreas de cuidado -->
+    <section class="areas" id="areas" aria-labelledby="areas-title">
+      <header class="section-head">
+        <p class="eyebrow"><span class="num">III</span> Áreas de cuidado</p>
+        <h2 id="areas-title" class="display-2" data-reveal>Três áreas, <em>uma atenção</em> inteira.</h2>
+      </header>
+      <ol class="focus">
+        <li class="focus-item" data-reveal>
+          <span class="focus-n" aria-hidden="true">01</span>
+          <h3 class="focus-name">Pavimento Pélvico</h3>
+          <p>Consulta dedicada à avaliação e ao tratamento das disfunções do pavimento pélvico.</p>
+        </li>
+        <li class="focus-item" data-reveal>
+          <span class="focus-n" aria-hidden="true">02</span>
+          <h3 class="focus-name">Reabilitação Oncológica</h3>
+          <p>Fisioterapia aplicada ao tratamento oncológico, em todas as fases do processo, para recuperar funcionalidade e diminuir a dor e o desconforto.</p>
+        </li>
+        <li class="focus-item" data-reveal>
+          <span class="focus-n" aria-hidden="true">03</span>
+          <h3 class="focus-name">Reeducação Postural Global</h3>
+          <p>Avaliação postural e tratamento através de posturas globais que trabalham as cadeias musculares, o método conhecido como RPG.</p>
+        </li>
+      </ol>
+
+      <div class="more" data-reveal>
+        <h3 class="more-title">Outras áreas de intervenção</h3>
+        <p class="more-note">Estas áreas resultam da formação e do percurso da Sofia e aguardam a sua confirmação antes da publicação.</p>
+        <ul class="more-list">
+          <li><span class="more-name">Oncologia da mama</span><span class="more-line">Recuperação após cirurgia e radioterapia da mama: mobilidade, cicatriz e retração dos tecidos.</span><span class="tbc">a confirmar</span></li>
+          <li><span class="more-name">Fisioterapia dermatofuncional</span><span class="more-line">Cuidado dos tecidos e da pele após cirurgia, radioterapia ou cicatrizes.</span><span class="tbc">a confirmar</span></li>
+          <li><span class="more-name">Músculo-esquelética e pós-cirúrgica</span><span class="more-line">Tratamento da dor e recuperação após lesão ou cirurgia, com plano individual.</span><span class="tbc">a confirmar</span></li>
+          <li><span class="more-name">Fisioterapia pediátrica</span><span class="more-line">Acompanhamento de bebés e crianças, por exemplo no torcicolo congénito ou em alterações posturais.</span><span class="tbc">a confirmar</span></li>
+          <li><span class="more-name">Postura e prevenção</span><span class="more-line">Avaliação postural, ergonomia e exercício para prevenir lesões, em adultos e crianças.</span><span class="tbc">a confirmar</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- V. Como trabalha -->
+    <section class="method" id="metodo" aria-labelledby="metodo-title">
+      <header class="section-head">
+        <p class="eyebrow"><span class="num">IV</span> Como trabalha</p>
+        <h2 id="metodo-title" class="display-2" data-reveal>Devagar, <em>com método.</em></h2>
+      </header>
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step-n" aria-hidden="true">i.</span>
+          <h3>Primeira consulta</h3>
+          <p>Um tempo para conversar: a sua história, as queixas e o que é importante para si no dia a dia.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-n" aria-hidden="true">ii.</span>
+          <h3>Avaliação</h3>
+          <p>Avaliação física e funcional, da postura ao movimento, para compreender a origem do problema e não apenas o sintoma.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-n" aria-hidden="true">iii.</span>
+          <h3>Plano individual</h3>
+          <p>Um plano definido consigo, com objetivos realistas, revisto ao longo do acompanhamento.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-n" aria-hidden="true">iv.</span>
+          <h3>Prevenção</h3>
+          <p>Exercícios e orientações para o dia a dia, para que os ganhos se mantenham para lá da consulta.</p>
+        </li>
+      </ol>
+      <p class="method-note" data-reveal>A fisioterapia trabalha em equipa: sempre que faz sentido, em articulação com o seu médico e outros profissionais de saúde.</p>
+    </section>
+
+    <!-- VI. Na imprensa -->
+    <section class="press" id="imprensa" aria-labelledby="imprensa-title">
+      <header class="section-head section-head--row">
+        <p class="eyebrow"><span class="num">V</span> Na imprensa</p>
+        <h2 id="imprensa-title" class="display-3" data-reveal>A Sofia tem partilhado o que sabe <em>com o público.</em></h2>
+      </header>
+      <ul class="press-list">
+        <li data-reveal><a href="https://magg.sapo.pt/atualidade/atualidade-nacional/artigos/babywearing-sao-as-opinioes-das-consultoras-mais-validas-do-que-as-dos-pediatras/" target="_blank" rel="noopener">
+          <span class="press-date">08.05.2018</span><span class="press-pub">MAGG</span><span class="press-what">Babywearing: quando e como usar o porta-bebés, com cuidado com a coluna dos pais.</span><span class="press-go" aria-hidden="true">↗</span></a></li>
+        <li data-reveal><a href="https://www.noticiasaominuto.com/lifestyle/1076948/dia-mundial-da-fisioterapia-a-profissao-que-recupera-o-corpo-e-a-mente" target="_blank" rel="noopener">
+          <span class="press-date">08.09.2018</span><span class="press-pub">Notícias ao Minuto</span><span class="press-what">Entrevista no Dia Mundial da Fisioterapia: a profissão que recupera o corpo e a mente.</span><span class="press-go" aria-hidden="true">↗</span></a></li>
+        <li data-reveal><a href="https://magg.sapo.pt/filhos/educacao/artigos/as-mochilas-pesadas-podem-causar-danos-na-coluna-das-criancas-o-que-fazer/" target="_blank" rel="noopener">
+          <span class="press-date">17.09.2018</span><span class="press-pub">MAGG</span><span class="press-what">Mochilas pesadas e a coluna das crianças: o que fazer.</span><span class="press-go" aria-hidden="true">↗</span></a></li>
+        <li data-reveal><a href="https://www.atlasdasaude.pt/publico/content/como-uma-ma-postura-pode-influenciar-nossa-saude" target="_blank" rel="noopener">
+          <span class="press-date">02.10.2018</span><span class="press-pub">Atlas da Saúde</span><span class="press-what">Artigo assinado pela Sofia: como uma má postura pode influenciar a saúde, e o papel da RPG.</span><span class="press-go" aria-hidden="true">↗</span></a></li>
+      </ul>
+      <p class="press-note">As ligações abrem os artigos originais noutro separador.</p>
+    </section>
+
+    <!-- VII. Contacto -->
+    <section class="contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="wreath">
+        <div class="wreath-anchor" id="wreath-anchor">
+          <img class="wreath-full" src="../assets/cardante-mark.svg" width="1768" height="1719" alt="Símbolo da Cardante: uma figura de costas, desenhada numa só linha, envolvida por uma coroa de folhas.">
+          <img class="wreath-line" src="./mark-line.svg" width="1768" height="1719" alt="" aria-hidden="true">
+        </div>
+        <p class="wreath-caption" aria-hidden="true">As folhas regressam ao símbolo.</p>
+      </div>
+      <div class="contact-copy">
+        <p class="eyebrow"><span class="num">VI</span> Contacto e marcação</p>
+        <h2 id="contacto-title" class="display-2">Marque a sua <em>consulta.</em></h2>
+        <p class="contact-lead">Para marcar, ligue:</p>
+        <a class="phone" href="tel:+351914378487"><span class="phone-label">Ligar</span> 914 378 487</a>
+        <dl class="facts">
+          <div>
+            <dt>Morada</dt>
+            <dd><address>Praceta Aldeia 31<br>4410-457 Arcozelo<br>Vila Nova de Gaia</address>
+              <a class="text-link" href="https://maps.google.com/?cid=15210243542327739814" target="_blank" rel="noopener">Ver no mapa <span aria-hidden="true">↗</span></a></dd>
+          </div>
+          <div>
+            <dt>Acessibilidade</dt>
+            <dd>Entrada, estacionamento e WC acessíveis a cadeira de rodas.</dd>
+          </div>
+          <div>
+            <dt>Instagram</dt>
+            <dd><a class="text-link" href="https://www.instagram.com/cardantefisio/" target="_blank" rel="noopener">@cardantefisio <span aria-hidden="true">↗</span></a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="foot-brand">Cardante – Fisioterapia e Bem-Estar</p>
+    <p>Sofia Cardante, fisioterapeuta · Cédula profissional n.º 7568 · Ordem dos Fisioterapeutas</p>
+    <p class="foot-note">Proposta de website, conceito C «Mãos e folhas». Conteúdos em validação; a escultura das mãos é uma imagem gerada em 3D, não uma fotografia.</p>
+  </footer>
+
+  <script src="./ui.js" defer></script>
+  <script type="module" src="./main.js"></script>
+  <script src="../assets/options.js" defer></script>
+</body>
+</html>

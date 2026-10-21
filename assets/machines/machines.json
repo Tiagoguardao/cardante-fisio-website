@@ -1,0 +1,74 @@
+{
+ "rf-tower": {
+  "dims_m": [
+   0.587,
+   0.535,
+   1.25
+  ],
+  "tris": 35608,
+  "bytes": 324544
+ },
+ "treatment-bed": {
+  "dims_m": [
+   1.95,
+   0.723,
+   0.6
+  ],
+  "tris": 38810,
+  "bytes": 200840
+ },
+ "bh-multigym": {
+  "dims_m": [
+   1.256,
+   1.388,
+   2.05
+  ],
+  "tris": 35088,
+  "bytes": 443084
+ },
+ "treadmill": {
+  "dims_m": [
+   1.75,
+   0.855,
+   1.257
+  ],
+  "tris": 35197,
+  "bytes": 287032
+ },
+ "vibration-plate": {
+  "dims_m": [
+   0.954,
+   0.919,
+   1.45
+  ],
+  "tris": 37614,
+  "bytes": 320612
+ },
+ "trampoline": {
+  "dims_m": [
+   0.997,
+   1.0,
+   0.273
+  ],
+  "tris": 38438,
+  "bytes": 382612
+ },
+ "paraffin-bath": {
+  "dims_m": [
+   0.283,
+   0.42,
+   0.196
+  ],
+  "tris": 36384,
+  "bytes": 240176
+ },
+ "chattanooga-unit": {
+  "dims_m": [
+   0.17,
+   0.271,
+   0.3
+  ],
+  "tris": 37912,
+  "bytes": 279728
+ }
+}

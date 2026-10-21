@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cardante — quatro propostas de website</title>
+<meta name="description" content="Quatro conceitos de website para a Cardante – Fisioterapia e Bem-Estar, preparados por Tiago Guardão.">
+<link rel="icon" href="assets/cardante-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#17323a; --soft:#53686e; --teal:#2c6878; --bg:#f3f1ea; --card:#fbfaf6; --line:rgba(44,104,120,.16); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.6 "Manrope", system-ui, sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: clamp(28px, 6vw, 72px) 16px 64px; }
+  header { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; margin-bottom: clamp(28px, 5vw, 52px); }
+  header img { width: clamp(72px, 10vw, 104px); height: auto; }
+  h1 { font: 300 clamp(2rem, 4.6vw, 3.3rem)/1.05 "Fraunces", Georgia, serif; margin: 0 0 8px; }
+  header p { margin: 0; color: var(--soft); max-width: 38rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  a.opt { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; background: var(--card);
+    border: 1px solid var(--line); border-radius: 18px; padding: 22px; min-height: 230px; transition: transform .25s, box-shadow .25s; }
+  a.opt:hover, a.opt:focus-visible { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(23,50,58,.12); outline: none; }
+  .tag { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font: 400 1.25rem/1 "Fraunces", serif; color: #fff; background: var(--c); }
+  .opt h2 { font: 400 1.45rem/1.15 "Fraunces", Georgia, serif; margin: 6px 0 0; }
+  .opt p { margin: 0; color: var(--soft); font-size: .93rem; }
+  footer { margin-top: 40px; font-size: .82rem; color: var(--soft); border-top: 1px solid var(--line); padding-top: 18px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="assets/cardante-mark.svg" alt="" width="1768" height="1719">
+    <div>
+      <h1>Cardante — quatro ideias para o novo website</h1>
+      <p>Propostas preparadas para a Sofia Cardante. Todas usam 3D de forma diferente; os textos partem do que é público sobre a Cardante e ficam por confirmar onde indicado.</p>
+    </div>
+  </header>
+  <div class="grid">
+    <a class="opt" href="a/" style="--c:#2c6878">
+      <span class="tag">A</span><h2>Visita ao estúdio</h2>
+      <p>O estúdio reconstruído em 3D. Ao deslizar, entra pela porta, atravessa a sala de espera e percorre cada área de tratamento.</p>
+    </a>
+    <a class="opt" href="b/" style="--c:#4f7f8e">
+      <span class="tag">B</span><h2>Atlas do corpo</h2>
+      <p>O corpo é o menu. Uma figura desenhada a linhas — herdeira do logótipo — mostra onde dói e como a Sofia trata.</p>
+    </a>
+    <a class="opt" href="c/" style="--c:#6f9cb1">
+      <span class="tag">C</span><h2>Mãos e folhas</h2>
+      <p>Uma marca de bem-estar calma e editorial, à volta de uma escultura 3D de mãos e folhas.</p>
+    </a>
+    <a class="opt" href="d/" style="--c:#c98a45">
+      <span class="tag">D</span><h2>Equipamento em 3D</h2>
+      <p>Cada máquina do estúdio como objeto 3D que se pode rodar e explorar, com aquilo para que serve.</p>
+    </a>
+  </div>
+  <footer>Conceitos em revisão, não publicados. Preparados por Tiago Guardão para a Cardante – Fisioterapia e Bem-Estar.</footer>
+</main>
+</body>
+</html>

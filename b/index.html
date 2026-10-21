@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#e8f0f1">
+  <meta name="description" content="Um lugar para escutar o seu corpo. Explore o atlas da Cardante — Fisioterapia e Bem Estar, com Sofia Cardante.">
+  <title>Atlas do corpo · Cardante — Fisioterapia e Bem Estar</title>
+  <link rel="icon" type="image/svg+xml" href="./mark.svg">
+  <link rel="preload" href="./fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Cardante — início">
+      <img class="brand-mark" src="../assets/cardante-logo.svg#svgView(viewBox(197,138,1999,1770))" width="44" height="54" alt="">
+      <span class="brand-type">CARDANTE<small>FISIOTERAPIA E BEM ESTAR</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a class="nav-atlas" href="#inicio">O corpo</a>
+      <a href="#sofia">A Sofia</a>
+      <a class="header-book" href="#marcacao">Vamos conversar <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <div class="atlas-world" id="atlas">
+      <div class="stage-shell" aria-label="Atlas interativo do corpo">
+        <div class="stage-topline"><span>ATLAS DO CORPO</span><span class="stage-instruction">Escolha uma zona <span aria-hidden="true">↙</span></span></div>
+        <div class="scene" id="scene">
+          <svg class="body-fallback" viewBox="0 0 600 800" role="img" aria-label="Figura humana desenhada com linhas e folhas">
+            <defs>
+              <linearGradient id="ink" x1="0" x2="1"><stop stop-color="#2c6878"/><stop offset="1" stop-color="#8baca6"/></linearGradient>
+              <pattern id="lines" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 0V8" stroke="#639596" stroke-width=".7"/></pattern>
+              <path id="body-shape" d="M300 47C264 47 247 71 251 105L256 141 273 157 268 177C250 186 226 184 214 208L193 308 177 406 190 421 207 398 221 326 234 280 241 351C216 390 218 421 230 462L249 556 247 682 236 723Q236 736 260 733L271 711 281 587 302 465 316 586 331 710 344 733Q368 736 367 721L352 680 351 548 373 451C385 408 376 379 361 350L369 280 383 326 396 399 411 421 425 408 408 306 386 208C376 187 350 184 329 177L327 157 345 140 349 101C350 70 330 47 300 47Z"/>
+            </defs>
+            <ellipse cx="300" cy="410" rx="215" ry="318" fill="none" stroke="#2c6878" stroke-opacity=".12" stroke-dasharray="2 8"/>
+            <use href="#body-shape" fill="url(#lines)" stroke="url(#ink)" stroke-width="2"/>
+            <g fill="none" stroke="#2c6878" stroke-width="1.1" opacity=".75">
+              <path d="M299 173C289 228 309 269 301 313S291 387 302 448M273 187C261 233 264 282 278 320S254 401 265 450L279 535M326 187C339 233 337 282 324 320S348 401 337 450L323 535M235 226Q300 268 367 226M235 247Q300 292 367 247M238 274Q300 316 365 274M239 306Q300 338 363 306M237 341Q300 372 365 341M230 379Q300 411 373 379M228 413Q300 449 376 413M234 445Q300 471 370 445"/>
+              <path d="M211 467Q137 407 163 305M180 403Q127 394 128 359Q165 363 180 403M164 357Q127 333 145 301Q171 323 164 357M168 331Q207 309 202 280Q166 288 168 331M369 325Q447 289 445 210M421 276Q469 264 469 235Q436 236 421 276M439 244Q403 225 414 197Q444 206 439 244"/>
+            </g>
+            <g fill="#aac1b5" opacity=".5"><path d="M180 403Q127 394 128 359Q165 363 180 403M164 357Q127 333 145 301Q171 323 164 357M168 331Q207 309 202 280Q166 288 168 331M421 276Q469 264 469 235Q436 236 421 276M439 244Q403 225 414 197Q444 206 439 244"/></g>
+          </svg>
+          <div class="hotspots" id="hotspots">
+            <a class="hotspot" href="#cervical" data-region="cervical" style="--px:50%;--py:23%"><span class="spot-dot"></span><span class="spot-label">Pescoço</span></a>
+            <a class="hotspot left" href="#ombros" data-region="ombros" style="--px:38%;--py:31%"><span class="spot-dot"></span><span class="spot-label">Ombros</span></a>
+            <a class="hotspot" href="#coluna" data-region="coluna" style="--px:52%;--py:44%"><span class="spot-dot"></span><span class="spot-label">Coluna</span></a>
+            <a class="hotspot left" href="#pelvis" data-region="pelvis" style="--px:42%;--py:54%"><span class="spot-dot"></span><span class="spot-label">Pélvis</span></a>
+            <a class="hotspot" href="#pernas" data-region="pernas" style="--px:57%;--py:71%"><span class="spot-dot"></span><span class="spot-label">Pernas</span></a>
+            <a class="hotspot left" href="#linfa" data-region="linfa" style="--px:42%;--py:63%"><span class="spot-dot"></span><span class="spot-label">Sistema linfático</span></a>
+          </div>
+          <div class="scene-caption" aria-hidden="true"><span>O CORPO É UM TODO.</span><span class="caption-line"></span><span>CUIDAMOS DE SI ASSIM.</span></div>
+        </div>
+        <div class="stage-bottomline">
+          <span class="view-label" id="view-label">FIG. 01 / O CORPO INTEIRO</span>
+          <div class="scene-tools">
+            <button class="tool-button" id="anatomy-toggle" type="button" aria-pressed="false" title="Mostrar linhas anatómicas"><svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><path d="m10 2 8 4-8 4-8-4Zm-8 8 8 4 8-4M2 14l8 4 8-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg><span>Ver por dentro</span></button>
+            <button class="tool-button turn-button" id="rotate-toggle" type="button" aria-label="Rodar a figura" title="Rodar a figura"><span aria-hidden="true">⤾</span></button>
+            <button class="tool-button pause-button" id="motion-toggle" type="button" aria-pressed="false" aria-label="Pausar movimento" title="Pausar movimento"><span aria-hidden="true">Ⅱ</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapters">
+        <section class="chapter hero" id="inicio" data-chapter="inicio" aria-labelledby="hero-heading">
+          <div class="chapter-copy hero-copy">
+            <p class="eyebrow"><span class="tiny-leaf" aria-hidden="true"></span> SOFIA CARDANTE · FISIOTERAPIA</p>
+            <h1 id="hero-heading">O corpo fala.<br>Vamos<br><span class="soft-word">escutá-lo.</span></h1>
+            <div class="hero-intro">
+              <p>Cada dor tem um lugar.<br>Cada pessoa, uma história.</p>
+              <a class="primary-link" href="#cervical">Onde sente dor? <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <a href="#cervical" class="scroll-prompt"><span class="scroll-line" aria-hidden="true"></span> UM PEQUENO PERCURSO PELO SEU CORPO</a>
+        </section>
+
+        <section class="chapter" id="cervical" data-chapter="cervical" aria-labelledby="cervical-heading">
+          <div class="chapter-copy">
+            <p class="eyebrow">ATLAS / PESCOÇO</p>
+            <h2 id="cervical-heading">O peso dos<br>seus <span class="soft-word">dias.</span></h2>
+            <p class="chapter-lead">Há dias que se sentem no pescoço. Ao virar a cabeça, ao trabalhar, ao fim da tarde.</p>
+            <div class="care-note"><span class="care-label">O PONTO DE PARTIDA</span><p>A Reeducação Postural Global é uma das áreas de intervenção de Sofia. O ponto de partida é compreender a sua postura e o seu movimento no dia a dia.</p></div>
+            <div class="care-tags"><span>Movimento</span><span>Vida diária</span></div>
+            <a class="text-link" href="#marcacao">Falar com a Sofia <span aria-hidden="true">↗</span></a>
+            <a class="next-region" href="#ombros">A seguir: ombros <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="chapter" id="ombros" data-chapter="ombros" aria-labelledby="ombros-heading">
+          <div class="chapter-copy">
+            <p class="eyebrow">ATLAS / OMBROS</p>
+            <h2 id="ombros-heading">Voltar a<br><span class="soft-word">alcançar.</span></h2>
+            <p class="chapter-lead">Vestir um casaco. Chegar à prateleira. Fazer aquele gesto que antes nem precisava de pensar.</p>
+            <div class="care-note"><span class="care-label">O PONTO DE PARTIDA</span><p>Conte à Sofia quais são os gestos que custam e em que contexto surgiu o desconforto. Confirme com ela o acompanhamento adequado à sua situação.</p></div>
+            <div class="care-tags"><span>Ombro</span><span>Braço</span><span>Movimento</span></div>
+            <a class="text-link" href="#marcacao">Falar com a Sofia <span aria-hidden="true">↗</span></a>
+            <a class="next-region" href="#coluna">A seguir: coluna e lombar <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="chapter" id="coluna" data-chapter="coluna" aria-labelledby="coluna-heading">
+          <div class="chapter-copy">
+            <p class="eyebrow">ATLAS / COLUNA E LOMBAR</p>
+            <h2 id="coluna-heading">O seu eixo.<br>O seu <span class="soft-word">ritmo.</span></h2>
+            <p class="chapter-lead">As costas acompanham tudo: as horas à secretária, os passeios, o que carrega consigo.</p>
+            <div class="care-note"><span class="care-label">O PONTO DE PARTIDA</span><p>A Reeducação Postural Global (RPG) faz parte das áreas de intervenção de Sofia. Inclui a avaliação da postura e o trabalho através de posturas globais.</p></div>
+            <div class="care-tags"><span>Coluna</span><span>Lombar</span><span>Rotina</span></div>
+            <a class="text-link" href="#marcacao">Falar com a Sofia <span aria-hidden="true">↗</span></a>
+            <a class="next-region" href="#pelvis">A seguir: anca e pélvis <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="chapter" id="pelvis" data-chapter="pelvis" aria-labelledby="pelvis-heading">
+          <div class="chapter-copy">
+            <p class="eyebrow">ATLAS / ANCA E PAVIMENTO PÉLVICO</p>
+            <h2 id="pelvis-heading">Há conversas<br>que merecem<br><span class="soft-word">espaço.</span></h2>
+            <p class="chapter-lead">Também o que é íntimo pode fazer parte da conversa. Com tempo, privacidade e respeito.</p>
+            <div class="care-note"><span class="care-label">FISIOTERAPIA DO PAVIMENTO PÉLVICO</span><p data-fact="pelvis">Uma das áreas de intervenção de Sofia. A avaliação individual é o ponto de partida para falar das suas dificuldades e do acompanhamento, ao seu ritmo.</p></div>
+            <div class="care-tags"><span>Escuta</span><span>Privacidade</span></div>
+            <a class="text-link" href="#marcacao">Falar com a Sofia <span aria-hidden="true">↗</span></a>
+            <a class="next-region" href="#pernas">A seguir: joelho e tornozelo <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="chapter" id="pernas" data-chapter="pernas" aria-labelledby="pernas-heading">
+          <div class="chapter-copy">
+            <p class="eyebrow">ATLAS / JOELHO E TORNOZELO</p>
+            <h2 id="pernas-heading">O próximo<br><span class="soft-word">passo.</span></h2>
+            <p class="chapter-lead">Uma escada, uma caminhada, o regresso à atividade. O movimento tem um significado diferente para cada pessoa.</p>
+            <div class="care-note"><span class="care-label">O PONTO DE PARTIDA</span><p>Identificar as suas dificuldades e os seus objetivos, desde os gestos do dia a dia à atividade que gosta de fazer.</p></div>
+            <div class="care-tags"><span>Joelho</span><span>Tornozelo</span><span>Atividade</span></div>
+            <a class="text-link" href="#marcacao">Falar com a Sofia <span aria-hidden="true">↗</span></a>
+            <a class="next-region" href="#linfa">A seguir: sistema linfático <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="chapter" id="linfa" data-chapter="linfa" aria-labelledby="linfa-heading">
+          <div class="chapter-copy">
+            <p class="eyebrow">ATLAS / SISTEMA LINFÁTICO</p>
+            <h2 id="linfa-heading">O que corre<br><span class="soft-word">por dentro.</span></h2>
+            <p class="chapter-lead">Nem tudo o que se sente é visível. A sensação de inchaço ou de peso também merece atenção.</p>
+            <div class="care-note"><span class="care-label">A PESSOA E O SEU CONTEXTO</span><p data-fact="linfa">A reabilitação oncológica é uma das áreas de intervenção de Sofia. Fale com ela sobre o que sente e o apoio de que precisa.</p><p class="unconfirmed">[Drenagem linfática: disponibilidade a confirmar com Sofia.]</p></div>
+            <div class="care-tags"><span>Sistema linfático</span><span>Escuta</span></div>
+            <a class="text-link" href="#marcacao">Falar com a Sofia <span aria-hidden="true">↗</span></a>
+            <a class="next-region" href="#bem-estar">A seguir: corpo e mente <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section class="chapter" id="bem-estar" data-chapter="bem-estar" aria-labelledby="bem-estar-heading">
+          <div class="chapter-copy">
+            <p class="eyebrow">ATLAS / CORPO E MENTE</p>
+            <h2 id="bem-estar-heading">Mais do que<br>uma <span class="soft-word">parte.</span></h2>
+            <p class="chapter-lead">Não é só um ombro. Nem apenas umas costas. É uma pessoa, com uma vida que acontece no corpo inteiro.</p>
+            <div class="care-note"><span class="care-label">BEM-ESTAR</span><p data-fact="bem-estar">Na sua abordagem à fisioterapia, Sofia valoriza a funcionalidade, a qualidade de vida e a pessoa no seu contexto. O cuidado ao corpo faz parte de uma história maior.</p></div>
+            <a class="text-link" href="#sofia">Conheça a Sofia <span aria-hidden="true">↗</span></a>
+            <p class="atlas-disclaimer">Este atlas é um convite à conversa. Não substitui uma avaliação individual. A figura é uma interpretação artística do corpo.</p>
+          </div>
+        </section>
+      </div>
+
+      <nav class="chapter-nav" aria-label="Regiões do atlas">
+        <a href="#inicio" data-nav="inicio" aria-label="O corpo inteiro" aria-current="location"><span></span></a>
+        <a href="#cervical" data-nav="cervical" aria-label="Pescoço"><span></span></a>
+        <a href="#ombros" data-nav="ombros" aria-label="Ombros"><span></span></a>
+        <a href="#coluna" data-nav="coluna" aria-label="Coluna e lombar"><span></span></a>
+        <a href="#pelvis" data-nav="pelvis" aria-label="Anca e pavimento pélvico"><span></span></a>
+        <a href="#pernas" data-nav="pernas" aria-label="Joelho e tornozelo"><span></span></a>
+        <a href="#linfa" data-nav="linfa" aria-label="Sistema linfático"><span></span></a>
+        <a href="#bem-estar" data-nav="bem-estar" aria-label="Corpo e mente"><span></span></a>
+      </nav>
+    </div>
+
+    <section class="sofia-section" id="sofia" aria-labelledby="sofia-heading">
+      <div class="sofia-art" aria-hidden="true">
+        <svg viewBox="0 0 520 580"><g fill="none" stroke="currentColor"><path stroke-width="2" d="M259 477C184 414 157 340 193 247C213 193 252 146 256 90M257 410C334 366 366 294 347 228M193 322C140 311 117 276 126 240C168 246 193 273 193 322ZM207 242C163 216 164 171 186 141C218 169 227 204 207 242ZM239 167C212 129 227 95 259 77C277 116 269 141 239 167ZM269 404C271 354 308 331 341 335C334 377 307 400 269 404ZM315 345C322 298 359 279 393 289C379 327 349 344 315 345ZM343 281C316 248 319 209 343 189C370 222 369 252 343 281Z"/><ellipse cx="257" cy="286" rx="166" ry="228" stroke-opacity=".25"/><ellipse cx="257" cy="286" rx="190" ry="252" stroke-opacity=".12" stroke-dasharray="3 7"/></g></svg>
+        <img class="sofia-logo" src="../assets/cardante-logo.svg" width="185" height="202" alt="">
+        <span class="art-signature">Cuidar é escutar.</span>
+      </div>
+      <div class="sofia-copy">
+        <p class="eyebrow">A PESSOA DO OUTRO LADO</p>
+        <h2 id="sofia-heading">Olá,<br>sou a <span class="soft-word">Sofia.</span></h2>
+        <p class="sofia-lead">Fisioterapeuta. Uma pessoa a cuidar de pessoas.</p>
+        <p data-fact="bio">Sou licenciada em Fisioterapia pelo Instituto Piaget e tenho formação inicial em Neurofisiologia. O meu percurso inclui o Hospital Lusíadas Porto.</p>
+        <p data-fact="approach">Na Cardante, em Arcozelo, Vila Nova de Gaia, dedico-me à fisioterapia do pavimento pélvico, à reabilitação oncológica e à Reeducação Postural Global.</p>
+        <div class="signature">Sofia Cardante <span>FISIOTERAPEUTA · CÉDULA PROFISSIONAL N.º 7568</span><small>Ordem dos Fisioterapeutas</small></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="marcacao" aria-labelledby="contact-heading">
+      <div class="contact-heading"><p class="eyebrow">O PRIMEIRO PASSO PODE SER UMA CONVERSA</p><h2 id="contact-heading">Vamos cuidar<br>de <span>si?</span></h2></div>
+      <div class="contact-details">
+        <p>Conte à Sofia o que sente e encontre um momento para si.</p>
+        <a class="contact-call" data-fact="phone-link" href="tel:+351914378487" aria-label="Ligar para Sofia Cardante: 914 378 487"><span data-fact="phone">914 378 487</span><span aria-hidden="true">↗</span></a>
+        <p class="contact-helper" data-fact="booking">Ligue para falar com a Sofia e confirmar a disponibilidade e a forma de marcação.</p>
+        <div class="contact-grid" id="contact-info">
+          <div><h3>ENCONTRE-NOS</h3><address data-fact="address">Praceta Aldeia 31<br>4410-457 Arcozelo<br>Vila Nova de Gaia</address><a data-fact="map-link" class="contact-map" href="https://maps.google.com/?cid=15210243542327739814" target="_blank" rel="noopener noreferrer">Ver no mapa ↗</a></div>
+          <div><h3>HORÁRIO</h3><p data-fact="hours">[Horário a confirmar<br>com Sofia.]</p><div class="social-links" data-fact="social"><a href="https://www.instagram.com/cardantefisio/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a href="#inicio">CARDANTE <span>FISIOTERAPIA E BEM ESTAR</span></a><p>O seu corpo. A sua história.</p><a class="back-top" href="#inicio">Voltar ao início ↑</a></footer>
+  <script type="module" src="./app.js"></script>
+  <script src="../assets/options.js" defer></script>
+</body>
+</html>

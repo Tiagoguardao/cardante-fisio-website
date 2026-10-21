@@ -1,0 +1,191 @@
+:root {
+  --ink: #17323a;
+  --ink-soft: #4b6168;
+  --teal: #2c6878;
+  --leaf: #6f9cb1;
+  --mist: #dfe9f2;
+  --paper: rgba(250, 251, 249, .86);
+  --line: rgba(44, 104, 120, .18);
+  --wood: #c98a45;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--ink); background: var(--mist);
+  font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased;
+}
+a { color: var(--teal); }
+#scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
+.still { position: fixed; inset: 0; z-index: 0; background: center/cover no-repeat url("still-overview.jpg"); display: none; }
+html.no-webgl .still { display: block; }
+html.no-webgl #scene { display: none; }
+html.no-webgl .ch:empty { min-height: 0; padding: 0; } /* chapters without a card only carry the 3D tour */
+.veil { position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  background: radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(18, 40, 46, .18)); }
+
+/* loader */
+.loader { position: fixed; inset: 0; z-index: 50; display: grid; place-content: center; justify-items: center; gap: 14px;
+  background: #eef3f5; transition: opacity .9s ease, visibility .9s; }
+.loader img { width: 96px; height: auto; animation: breathe 2.4s ease-in-out infinite; }
+.loader p { margin: 0; font: 400 1.05rem/1.3 var(--serif); color: var(--ink-soft); }
+html.ready .loader { opacity: 0; visibility: hidden; }
+@keyframes breathe { 50% { transform: scale(1.04); opacity: .85; } }
+
+/* header */
+.top { position: fixed; z-index: 20; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center;
+  padding: max(14px, env(safe-area-inset-top)) clamp(16px, 3vw, 36px) 14px; pointer-events: none; }
+.top a { pointer-events: auto; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand img { width: 34px; height: auto; }
+.brand b { display: block; font: 500 1.05rem/1 var(--serif); letter-spacing: .14em; text-transform: uppercase; }
+.brand small { display: block; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); margin-top: 3px; }
+.nav { display: flex; gap: 6px; margin-left: auto; margin-right: 8px; pointer-events: auto; }
+.nav a { text-decoration: none; color: var(--ink); font-weight: 600; font-size: .84rem; line-height: 1.6; padding: 9px 14px; border-radius: 999px;
+  background: var(--paper); border: 1px solid rgba(255, 255, 255, .7); box-shadow: 0 6px 18px rgba(23, 50, 58, .1);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); white-space: nowrap; transition: background .2s, color .2s; }
+.nav a:hover, .nav a:focus-visible { background: #fff; color: var(--teal); outline: none; }
+/* "Como chegar": round Google Maps badge inside the pill, concentric with its left end (badge = line box + 8px, so the pill keeps its height) */
+.nav a.maps { display: inline-flex; align-items: center; gap: 7px; padding: 5px 14px 5px 5px; }
+.nav a.maps .gm { flex: none; width: calc(1.6em + 8px); height: calc(1.6em + 8px); border-radius: 50%; background: #fff; box-shadow: 0 0 0 1px rgba(23, 50, 58, .1); display: grid; place-items: center; }
+.nav a.maps .gm svg { height: 64%; width: auto; display: block; }
+.nav a[aria-current] { background: var(--ink); color: #f4f8f8; }
+.cta { text-decoration: none; background: var(--teal); color: #f4f8f8; font-weight: 600; font-size: .86rem;
+  padding: 10px 16px; border-radius: 999px; box-shadow: 0 8px 24px rgba(23, 50, 58, .18); white-space: nowrap; }
+.cta .num { font-weight: 500; opacity: .8; margin-left: 6px; }
+.cta .ico { display: none; width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
+.cta:hover, .cta:focus-visible { background: #22525f; outline: none; }
+
+/* social links (bottom-left) */
+.social { position: fixed; z-index: 20; left: clamp(16px, 3vw, 36px); bottom: max(16px, env(safe-area-inset-bottom)); display: flex; gap: 8px; }
+.social a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: var(--teal);
+  background: var(--paper); border: 1px solid rgba(255, 255, 255, .7); box-shadow: 0 6px 18px rgba(23, 50, 58, .12);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: background .2s, color .2s, transform .2s; }
+.social a:hover, .social a:focus-visible { background: var(--teal); color: #fff; transform: translateY(-2px); outline: none; }
+.social svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.social svg .dot, .social svg .fill { fill: currentColor; stroke: none; }
+
+/* progress rail */
+.rail { position: fixed; z-index: 15; right: clamp(10px, 2vw, 28px); top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 10px; }
+.rail a { display: grid; place-items: center; width: 16px; height: 16px; }
+.rail a i { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--teal); transition: .3s; flex: none; }
+.rail a[aria-current] i { background: var(--teal); transform: scale(1.25); }
+.rail a:focus-visible { outline: none; }
+.rail a:focus-visible i { box-shadow: 0 0 0 3px rgba(44, 104, 120, .3); }
+
+/* chapters */
+main { position: relative; z-index: 5; }
+.ch { min-height: 150vh; display: flex; align-items: flex-start; padding: 0 clamp(16px, 5vw, 72px); }
+.ch.hero { min-height: 170vh; }
+.ch.final { min-height: 140vh; }
+.card { position: sticky; top: 22vh; max-width: 30rem; margin-top: 18vh; padding: clamp(20px, 2.4vw, 32px);
+  background: var(--paper); border: 1px solid rgba(255, 255, 255, .7); border-radius: 18px;
+  -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow: 0 18px 50px rgba(23, 50, 58, .12); transition: opacity .5s ease, transform .6s cubic-bezier(.2, .7, .2, 1); }
+.card.right { margin-left: auto; margin-right: clamp(10px, 5vw, 80px); } /* clears the rail dots */
+.card.wide { max-width: 34rem; }
+/* one-line cards: a statement per stop (linking to the treatment), and two about Sofia */
+.card.line { max-width: 22rem; padding: clamp(18px, 2vw, 26px); }
+.card.line h2 { font-size: clamp(1.45rem, 2.1vw, 1.85rem); margin-bottom: 16px; }
+.card.say { max-width: 25rem; padding: clamp(18px, 2vw, 26px); }
+.card.say p { font: 400 clamp(1.3rem, 1.8vw, 1.6rem)/1.3 var(--serif); color: var(--ink); letter-spacing: -.005em; }
+.card.welcome { max-width: none; width: max-content; } /* the welcome at the waiting corner, on one line */
+.card.welcome h2 { font-size: clamp(1.8rem, 2.6vw, 2.4rem); margin: 0; }
+.go { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(255, 255, 255, .6); color: var(--teal); font-weight: 600; font-size: .9rem; text-decoration: none;
+  transition: background .2s, border-color .2s, transform .2s; }
+.go:hover, .go:focus-visible { background: #fff; border-color: var(--teal); transform: translateY(-1px); outline: none; }
+.ch:not(.on) .card, .ch:not(.on) .square { opacity: 0; transform: translateY(24px); pointer-events: none; } /* faded cards must not catch clicks */
+
+/* final chapter: "Máquinas e tratamentos" square beside the booking card */
+.end { position: sticky; top: 20vh; margin: 16vh clamp(10px, 5vw, 80px) 0 auto; display: flex; align-items: stretch; gap: 16px; }
+.end .card { position: static; margin: 0; max-width: 30rem; }
+.square { width: 18rem; flex: none; display: flex; flex-direction: column; gap: 10px; padding: clamp(20px, 2.4vw, 28px);
+  background: var(--paper); border: 1px solid rgba(255, 255, 255, .7); border-radius: 18px;
+  -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow: 0 18px 50px rgba(23, 50, 58, .12); transition: opacity .5s ease, transform .6s cubic-bezier(.2, .7, .2, 1); }
+.square h2 { font-size: clamp(1.4rem, 2vw, 1.75rem); margin-bottom: 4px; }
+.sq-link { flex: 1 1 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; padding: 12px; border: 1px solid var(--line); border-radius: 14px;
+  text-decoration: none; color: var(--ink); background: rgba(255, 255, 255, .5); transition: background .2s, border-color .2s, transform .2s; }
+.sq-link:hover, .sq-link:focus-visible { background: #fff; border-color: var(--teal); transform: translateY(-2px); outline: none; }
+.sq-link b { display: block; font: 500 1.05rem/1.2 var(--serif); }
+.sq-link small { display: block; font-size: .78rem; line-height: 1.35; color: var(--ink-soft); margin-top: 2px; }
+.thumbs { display: flex; flex: none; }
+.thumbs img { width: 40px; height: 40px; object-fit: contain; border-radius: 10px; background: #eef3f5; border: 2px solid #fff; }
+.thumbs img + img { margin-left: -16px; }
+.hero .card { background: transparent; border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; top: 16vh; margin-top: 14vh; max-width: 36rem; }
+.hero .card p { color: #26434b; }
+.hero .card::before { content: ""; position: absolute; inset: -40px -60px -40px -40vw; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(244, 246, 242, .88), rgba(244, 246, 242, 0)); }
+.eyebrow { margin: 0 0 10px; font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); }
+h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.01em; margin: 0 0 14px; color: var(--ink); }
+h1 { font-size: clamp(2.4rem, 5.4vw, 4.4rem); line-height: 1.02; }
+h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.12; }
+.card p { margin: 0 0 12px; color: var(--ink-soft); }
+.card p:last-child { margin-bottom: 0; }
+.hint { display: flex; align-items: center; gap: 10px; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; margin-top: 26px !important; }
+.mouse { width: 18px; height: 28px; border: 1.5px solid currentColor; border-radius: 10px; position: relative; }
+.mouse::after { content: ""; position: absolute; left: 50%; top: 5px; width: 2px; height: 6px; margin-left: -1px; background: currentColor; border-radius: 2px; animation: wheel 1.6s infinite; }
+@keyframes wheel { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(9px); opacity: 0; } }
+.lead { font: italic 300 1.2rem/1.45 var(--serif) !important; color: var(--ink) !important; }
+.contact .big { display: inline-block; font: 400 clamp(2rem, 4vw, 2.8rem)/1 var(--serif); text-decoration: none; color: var(--teal); margin: 6px 0 12px; }
+.contact .addr { color: var(--ink-soft); text-decoration: none; transition: color .2s; }
+.contact .addr:hover, .contact .addr:focus-visible { color: var(--teal); outline: none; }
+.facts { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 4px; font-size: .8rem; color: var(--ink-soft); }
+
+
+@media (max-width: 760px) {
+  .ch { padding: 0 12px 64px; flex-direction: column; justify-content: flex-end; }
+  .card, .card.right { margin: 0; top: auto; bottom: 64px; position: sticky; max-width: none; width: 100%; padding: 18px; }
+  .hero .card { margin: 0; top: auto; bottom: 64px; position: sticky; padding: 18px 6px; }
+  .hero .card::before { inset: -30px -16px -40px -16px; background: linear-gradient(transparent, rgba(244, 246, 242, .92) 35%); border-radius: 18px; }
+  .card p { font-size: .9rem; line-height: 1.5; }
+  .card h2 { font-size: 1.45rem; }
+  .card.line, .card.say { max-width: none; padding: 16px 18px; }
+  .card.line h2 { font-size: 1.3rem; margin-bottom: 12px; }
+  .card.say p { font-size: 1.2rem; }
+  .card.welcome h2 { font-size: 1.6rem; }
+  .rail { display: none; }
+  .cta .num, .cta .long { display: none; }
+  .brand small { display: none; }
+  .nav a { padding: 8px 11px; font-size: .78rem; }
+  .nav a.maps { padding: 4px 11px 4px 4px; gap: 6px; }
+  .cta { padding: 9px 13px; font-size: .8rem; }
+  .social { left: 12px; bottom: max(12px, env(safe-area-inset-bottom)); gap: 6px; }
+  .social a { width: 36px; height: 36px; }
+  .social svg { width: 18px; height: 18px; }
+  .end { position: sticky; top: auto; bottom: 64px; margin: 0; flex-direction: column; gap: 10px; }
+  .end .card { width: 100%; padding: 18px; }
+  .square { width: 100%; padding: 14px; flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .square .eyebrow { display: none; }
+  .square h2 { width: 100%; font-size: 1.15rem; margin: 0; }
+  .sq-link { flex: 1 1 0; padding: 10px; }
+  .sq-link .thumbs, .sq-link small { display: none; }
+  h1 { font-size: 2.4rem; }
+}
+@media (max-width: 480px) {
+  .top { padding-left: 12px; padding-right: 12px; }
+  .brand span { display: none; }
+  .nav { gap: 4px; margin-right: 6px; }
+  .nav a { padding: 7px 9px; font-size: .72rem; }
+  .nav a.maps { padding: 3px 9px 3px 3px; gap: 5px; }
+  .brand img { width: 28px; }
+  .cta { padding: 9px; display: grid; place-items: center; }
+  .cta .ico { display: block; }
+  .cta .txt { display: none; }
+}
+@media (max-width: 400px) { /* the Maps badge widens "Como chegar": tighten the header so it still fits 360px */
+  .top { padding-left: 10px; padding-right: 10px; }
+  .brand img { width: 24px; }
+  .nav { gap: 3px; margin-right: 4px; }
+  .nav a { padding: 7px 8px; font-size: .7rem; }
+  .nav a.maps { padding: 3px 8px 3px 3px; gap: 4px; }
+  .cta { padding: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .square, .loader { transition: none; }
+  .loader img, .mouse::after { animation: none; }
+}
