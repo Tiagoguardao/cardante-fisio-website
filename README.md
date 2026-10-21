@@ -10,6 +10,7 @@ Quatro propostas de website para a Cardante – Fisioterapia e Bem-Estar (Arcoze
 | `c/` | **Mãos e folhas**: marca de bem-estar calma, à volta de uma escultura 3D |
 | `d/` | **Equipamento em 3D**: cada máquina do estúdio como objeto 3D que se pode rodar |
 | `assets/` | Logótipo e símbolo da Cardante, os modelos 3D das máquinas (`assets/machines/`) e `options.js` |
+| `source/3d/` | Cenas Blender do estúdio da proposta A, para editar o 3D (o site não as carrega) |
 
 ## Ver localmente
 
@@ -38,7 +39,7 @@ As propostas foram feitas para revisão e não para estar online tal como estão
 
 ## Imagens e 3D
 
-Os modelos das máquinas (`assets/machines/*.glb`) e a escultura da proposta C (`c/hero.glb`) foram gerados por IA (Higgsfield / Tripo) e finalizados em Blender. A sala da proposta A (`a/studio.glb`) é uma reconstrução em Blender. São representações aproximadas, não modelos exatos do equipamento.
+Os modelos das máquinas (`assets/machines/*.glb`) e a escultura da proposta C (`c/hero.glb`) foram gerados por IA (Higgsfield / Tripo) e finalizados em Blender. A sala da proposta A (`a/studio.glb`) é uma reconstrução em Blender. São representações aproximadas, não modelos exatos do equipamento. As cenas Blender da sala estão em [`source/3d/`](source/3d/).
 
 ## Licença
 
