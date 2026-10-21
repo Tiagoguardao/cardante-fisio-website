@@ -1,6 +1,6 @@
 // Option A — scroll-driven visit through Sofia Cardante's studio.
 // The room is a Blender reconstruction with lighting baked into textures (studio.glb);
-// the machines are separate Higgsfield/Tripo models lit in real time.
+// the machines are separate AI-generated models lit in real time.
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";

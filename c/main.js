@@ -1,6 +1,6 @@
 /* Cardante · Conceito C · «Mãos e folhas»
    One fixed WebGL layer behind the editorial page:
-   - porcelain hands (Higgsfield image → Tripo 3D → Blender/Draco) that sit on DOM "slots" and travel with scroll;
+   - porcelain hands (AI-generated image → image-to-3D model → Blender/Draco) that sit on DOM "slots" and travel with scroll;
    - instanced glazed leaves that leave the hands, drift through the page and land, at the end,
      inside the outlines of the Cardante symbol to complete it.
    Fallbacks: the HTML ships a poster image and the full logo; this file only upgrades them. */
@@ -163,7 +163,7 @@ function init() {
           normalMap: old.normalMap,
           roughnessMap: old.roughnessMap,
           roughness: 1,
-          metalness: 0, // Tripo bakes a metallic channel; porcelain is a dielectric
+          metalness: 0, // the generated model bakes a metallic channel; porcelain is a dielectric
           sheen: 0.5,
           sheenRoughness: 0.65,
           sheenColor: new THREE.Color("#ffffff"),
